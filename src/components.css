@@ -1,0 +1,32 @@
+.input-field {
+  display: flex;
+  justify-content: center;
+}
+
+.list-of-todos {
+  list-style: none;
+  text-align: center;
+}
+
+.add {
+  margin: 3px;
+  padding: 7px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3d56b2;
+  color: white;
+}
+.add:hover {
+  cursor: pointer;
+}
+
+.clear {
+  border: none;
+  border-radius: 8px;
+  background-color: #290fba;
+  color: white;
+}
+
+.clear:hover {
+  cursor: pointer;
+}
