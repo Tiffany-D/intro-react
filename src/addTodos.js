@@ -1,28 +1,32 @@
 import './components.css';
+import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 
 
 function Todos(addToList) {
-    const [todos, setTodos] = useState({
+    const [todo, setTodo] = useState({
+        id:"",
         task: "",
         completed: false
     });
+    //update task property
     function inputAdded(e) {
-        setTodos({ ...todos, task: e.target.value });
+        setTodo({ ...todo, task: e.target.value });
     }
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        if (todos.task.trim()) {
-            addToList({ ...todos });
-            Todos({ ...todos, task: "" });
+    function handleSubmit() {
+        //e.preventDefault();
+        if (todo.task.trim()) {
+            addToList({...todo, id: uuidv4});
+            //reset task input
+            setTodo({ ...todo, task: "" });
         }
     }
 
 
     return (
-        <form onSubmit={handleSubmit}className="input-field">
-            <input onChange={inputAdded} name="task" value={todos.task} type="text" placeholder="Add something to do..."></input>
+        <form onSubmit={handleSubmit} className="input-field">
+            <input onChange={inputAdded} name="task" value={todo.task} type="text" placeholder="Add something to do..."></input>
             <button onClick={addToList}className="add" type="submit">Add</button>
         </form>
        

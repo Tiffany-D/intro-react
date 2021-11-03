@@ -8,9 +8,10 @@ import React, { useState } from 'react';
 
 
 export function App(todos) {
-  const [add, setAdd]=useState([]);
-  function addToList() {
-    setAdd([todos, ...todos]);
+  const [add, setAdd] = useState([]);
+  
+  function addToList(todo) {
+    setAdd([todo, ...add]);
   }
 
   return (
@@ -18,8 +19,8 @@ export function App(todos) {
       <header className="App-header">
         <h1>To Do List</h1>
       </header>
-      <Todos addToList={addToList} value={add} />
-      <List />
+      <Todos addToList={addToList} />
+      <List add={add}/>
     </div>
     
   );

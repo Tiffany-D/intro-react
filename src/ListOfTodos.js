@@ -1,10 +1,15 @@
+import Todos from './addTodos';
+import './Todo';
 import './components.css';
 
 
-function List() {
+function List({add}) {
     return (
         <ul className="list-of-todos">
-            <li>
+            {add.map(todo => (
+                <Todos todo={todo} key={todo.id}/>
+            ))}
+            {/* <li>
                 <input type="checkbox"></input>
                 <label>Repair bathroom</label>
                 <button className="clear" type="submit">x</button>
@@ -13,7 +18,7 @@ function List() {
             <input type="checkbox"></input>
                 <label>BeCode event at 2PM</label>
                 <button className="clear" type="submit">x</button>
-            </li>
+            </li> */}
         </ul>
     )
 }
