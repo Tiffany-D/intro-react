@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap");
 
 .App {
+  text-align:center;
+  font-family:'Henny Penny', cursive;
   margin: 50px 150px;
   height: 110vh;
   border: 1px solid black;
@@ -9,7 +11,9 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
-
+.input-field{
+  text-align:center;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
