@@ -1,6 +1,6 @@
 import './App.css';
 import './components.css';
-import React, { useEffect,useState } from 'react';
+import React from 'react';
 
 
 
@@ -43,16 +43,16 @@ setTodos(updateToDos)
 }
 
 //complete a task
-function toggleComplete(id){
-const updateToDos = [...todos].map((todos)=>{
-  if(todo.id === id){
-    todo.completed= !todo.completed
-  }
-  return todo
-})
-setTodos(updateToDos);
+// function toggleComplete(id){
+// const updateToDos = [...todos].map((todos)=>{
+//   if(todo.id === id){
+//     todo.completed= !todo.completed
+//   }
+//   return todo
+// })
+// setTodos(updateToDos);
 
-}
+// }
  
   return (
     <div className="App">
