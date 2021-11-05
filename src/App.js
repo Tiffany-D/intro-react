@@ -61,11 +61,12 @@ setTodos(updateToDos);
      <input type="text" onChange={(e)=> setTodo(e.target.value)} value={todo}/>
      <button type="submit">Add</button>
      </form>
-     <input type="checkbox" onChange={()=> toggleComplete(todo.id)} checked={todo.completed}/>
+    {/* <input type="checkbox" onChange={()=> toggleComplete(todo.id)} checked={todo.completed} /> */}
+      
      {todos.map((todo)=><div key={todo.id}>
-     
-     <button onClick={()=> deleteToDo(todo.id)}>Delete</button>
      <div>{todo.text}</div>
+   <button onClick={()=> deleteToDo(todo.id)} >Delete</button>
+     
      </div>)}
 
     </div>
